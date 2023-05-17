@@ -1,1 +1,218 @@
 learning git sourav kumar by Thapa technical.
+
+Lenovo@sourav MINGW64 ~
+$ d:
+bash: d:: command not found
+
+Lenovo@sourav MINGW64 ~
+$ cd d:
+
+Lenovo@sourav MINGW64 /d
+$ dir
+$RECYCLE.BIN                 demo          music              python\ prac
+ADOBE\ APPS                  diwali        notes_html         pythonProject
+IMPORTANT                    editing       old\ photos        pythonProject1
+New\ folder\ (2)             formlua       oracle\ 10\ g      staff_selection
+System\ Volume\ Information  google_video  oracle\ 10\ g.zip  tickets
+coding                       learning      phone              videos
+college_memory               movies        python             vs\ code
+
+Lenovo@sourav MINGW64 /d
+$ mkdir git
+
+Lenovo@sourav MINGW64 /d
+$ cd git
+
+Lenovo@sourav MINGW64 /d/git
+$ mkdir gitlearn
+
+Lenovo@sourav MINGW64 /d/git
+$ cd gitlearn
+
+Lenovo@sourav MINGW64 /d/git/gitlearn
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Lenovo@sourav MINGW64 /d/git/gitlearn
+$ git init
+Initialized empty Git repository in D:/git/gitlearn/.git/
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git config --global user.name
+Sourav Kumar
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git config --global email
+error: key does not contain a section: email
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git config --global user,email
+error: key does not contain a section: user,email
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git config --global user.email
+sk4118251@gmail.com
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ dir
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ touch index.html
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ dir
+index.html
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ notepad index.html
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ dir
+index.html
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ index.html
+bash: index.html: command not found
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ notepad index.html
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git add index.html
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git commit -m 'Revising git by thapa technical'
+[master (root-commit) c825fa9] Revising git by thapa technical
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git log
+commit c825fa9d4939cf288c5bc4d11b4294e29f778c6e (HEAD -> master)
+Author: Sourav Kumar <sk4118251@gmail.com>
+Date:   Wed May 17 10:20:00 2023 +0530
+
+    Revising git by thapa technical
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git log --oneline
+c825fa9 (HEAD -> master) Revising git by thapa technical
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ cat index.html
+learning git sourav kumar by Thapa technical.
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git remote
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git remote add https://github.com/Sourav-8401/demo-repo2.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git remote
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git remote add origin https://github.com/Sourav-8401/demo-repo2.git
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git remote
+origin
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$ git push -u origin master
+To https://github.com/Sourav-8401/demo-repo2.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Sourav-8401/demo-repo2.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Lenovo@sourav MINGW64 /d/git/gitlearn (master)
+$
